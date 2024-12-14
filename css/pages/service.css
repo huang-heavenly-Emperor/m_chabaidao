@@ -1,0 +1,112 @@
+/* 主要内容区域 */
+.main {
+    width: 1210px;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+/* 服务内容 */
+.service-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    margin-top: 30px;
+}
+
+.service-left,
+.service-right {
+    width: 45%;
+}
+
+.service-left li,
+.service-right li {
+    margin-bottom: 50px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.05);
+    transition: all 0.3s;
+}
+
+.service-left li:hover,
+.service-right li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.service-left li h3,
+.service-right li h3 {
+    color: #1B4B36;
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.service-left li span,
+.service-right li span {
+    color: #666;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+/* 移动端适配 */
+@media screen and (max-width: 768px) {
+    .main {
+        width: 100%;
+        padding: 20px 15px;
+    }
+
+    .service-content {
+        flex-direction: column;
+        padding: 20px 0;
+    }
+
+    .service-left,
+    .service-right {
+        width: 100%;
+    }
+
+    .service-left li,
+    .service-right li {
+        margin-bottom: 20px;
+        padding: 15px;
+    }
+
+    .service-left li h3,
+    .service-right li h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .service-left li span,
+    .service-right li span {
+        font-size: 14px;
+    }
+
+    .service-left li span br,
+    .service-right li span br {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .service-content {
+        padding: 15px 0;
+    }
+
+    .service-left li,
+    .service-right li {
+        margin-bottom: 15px;
+        padding: 12px;
+    }
+
+    .service-left li h3,
+    .service-right li h3 {
+        font-size: 16px;
+    }
+
+    .service-left li span,
+    .service-right li span {
+        font-size: 13px;
+    }
+}

@@ -1,0 +1,151 @@
+/* 加盟页面样式 */
+.join-section {
+    width: 1210px;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+.join-form {
+    width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background: #f9f9f9;
+    border-radius: 10px;
+}
+
+.form-tips {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.form-tips strong {
+    color: #B87E5F;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: inline-block;
+    width: 80px;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.form-group label span {
+    color: red;
+}
+
+.form-group input,
+.form-group textarea {
+    width: calc(100% - 100px);
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form-group textarea {
+    height: 120px;
+    resize: none;
+}
+
+.quick-message {
+    margin: 30px 0;
+    padding: 20px;
+    background: #fff;
+    border-radius: 4px;
+}
+
+.quick-message h4 {
+    color: #1B4B36;
+    margin-bottom: 15px;
+}
+
+.quick-message-list p {
+    margin: 10px 0;
+    color: #666;
+    cursor: pointer;
+}
+
+.quick-message-list p:hover {
+    color: #B87E5F;
+}
+
+.form-buttons {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.btn {
+    padding: 10px 30px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.btn-submit {
+    background: #1B4B36;
+    color: #fff;
+}
+
+.btn-reset {
+    background: #B87E5F;
+    color: #fff;
+}
+
+.risk-tips {
+    text-align: center;
+    margin-top: 30px;
+    color: #999;
+}
+
+/* 移动端适配 */
+@media screen and (max-width: 768px) {
+    .join-section {
+        width: 100%;
+        padding: 20px 15px;
+    }
+
+    .join-form {
+        width: 100%;
+        padding: 20px 15px;
+    }
+
+    .form-group label {
+        display: block;
+        width: 100%;
+        text-align: left;
+        margin-bottom: 5px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        width: 100%;
+    }
+
+    .quick-message {
+        padding: 15px;
+    }
+
+    .btn {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .join-form {
+        padding: 15px 10px;
+    }
+
+    .form-tips {
+        font-size: 14px;
+    }
+
+    .quick-message-list p {
+        font-size: 14px;
+    }
+} 

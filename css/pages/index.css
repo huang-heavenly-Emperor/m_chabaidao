@@ -1,0 +1,379 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Microsoft YaHei", sans-serif;
+    background: #F7F4F0;
+}
+
+.container {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* 主要内容区域 */
+.main {
+    width: 1210px;
+    margin: 0 auto;
+}
+
+/* 轮播图部分 */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.banner-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.banner-container img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.banner-container img.active {
+    opacity: 1;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 50%;
+    transition: all 0.3s;
+    user-select: none;
+}
+
+.arrow:hover {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.arrow.left {
+    left: 20px;
+}
+
+.arrow.right {
+    right: 20px;
+}
+
+.dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.dots span {
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.dots span.active {
+    background: #fff;
+    transform: scale(1.2);
+}
+
+/* 品牌介绍部分 */
+.brand-intro {
+    padding: 60px 0;
+}
+
+.intro-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-top: 30px;
+}
+
+.intro-text {
+    flex: 1;
+}
+
+.intro-text p {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.intro-content img {
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.intro-content img:hover {
+    transform: scale(1.05);
+}
+
+/* 热门推荐部分 */
+.hot-products {
+    padding: 60px 0;
+    background: #f9f9f9;
+}
+
+.product-list {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.product-item {
+    flex: 1;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s;
+    position: relative;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.tag {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #B87E5F;
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 12px;
+}
+
+.product-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-item h3 {
+    padding: 15px;
+    color: #1B4B36;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.product-item p {
+    padding: 0 15px;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+    height: 66px;
+    overflow: hidden;
+}
+
+.sales {
+    padding: 10px 15px;
+    color: #999;
+    font-size: 14px;
+}
+
+.price {
+    padding: 0 15px 15px;
+    color: #B87E5F;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.more-btn {
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: #1B4B36;
+    color: #fff;
+    border-radius: 20px;
+    margin: 30px auto 0;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.more-btn:hover {
+    background: #2C7154;
+}
+
+/* 优惠推荐部分 */
+.promotions {
+    padding: 60px 0;
+}
+
+.promo-list {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.promo-item {
+    flex: 1;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s;
+}
+
+.promo-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.promo-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* 移动端适配 */
+@media screen and (max-width: 768px) {
+    .main {
+        width: 100%;
+    }
+
+    .banner {
+        height: 300px;
+    }
+
+    .arrow {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 16px;
+    }
+
+    .brand-intro {
+        padding: 30px 15px;
+    }
+
+    .intro-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .intro-content img {
+        width: 100%;
+        height: 200px;
+        order: -1;
+    }
+
+    .intro-text p {
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+
+    .hot-products {
+        padding: 30px 15px;
+    }
+
+    .product-list {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .product-item {
+        width: 100%;
+    }
+
+    .product-item img {
+        height: 180px;
+    }
+
+    .product-item h3 {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+
+    .product-item p {
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .promotions {
+        padding: 30px 15px;
+    }
+
+    .promo-list {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .promo-item img {
+        height: 180px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .banner {
+        height: 200px;
+    }
+
+    .arrow {
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+        font-size: 14px;
+    }
+
+    .dots span {
+        width: 8px;
+        height: 8px;
+    }
+
+    .intro-content img {
+        height: 160px;
+    }
+
+    .intro-text p {
+        font-size: 13px;
+    }
+
+    .product-item img {
+        height: 160px;
+    }
+
+    .product-item h3 {
+        font-size: 15px;
+    }
+
+    .product-item p {
+        font-size: 13px;
+    }
+
+    .price {
+        font-size: 18px;
+    }
+
+    .promo-item img {
+        height: 160px;
+    }
+}

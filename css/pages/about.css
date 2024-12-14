@@ -1,0 +1,209 @@
+/* 主要内容区域 */
+.main {
+    width: 1210px;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+/* 品牌介绍部分 */
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-top: 30px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text p {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.about-image {
+    width: 500px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.about-image:hover img {
+    transform: scale(1.05);
+}
+
+/* 品牌故事部分 */
+.story-section {
+    margin-top: 60px;
+}
+
+.story-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-top: 30px;
+}
+
+.story-image {
+    width: 500px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.story-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.story-image:hover img {
+    transform: scale(1.05);
+}
+
+.story-text {
+    flex: 1;
+}
+
+.story-text h3 {
+    color: #1B4B36;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.story-text p {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+/* 运营优势部分 */
+.advantage-section {
+    margin-top: 60px;
+}
+
+.advantage-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.advantage-item {
+    width: calc(50% - 15px);
+    padding: 30px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.05);
+    transition: all 0.3s;
+}
+
+.advantage-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.advantage-item h4 {
+    color: #1B4B36;
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.advantage-item p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+/* 移动端适配 */
+@media screen and (max-width: 768px) {
+    .main {
+        width: 100%;
+        padding: 20px 15px;
+    }
+
+    .about-content,
+    .story-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .about-image,
+    .story-image {
+        width: 100%;
+        height: 200px;
+        order: -1;
+    }
+
+    .about-text p,
+    .story-text p {
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+
+    .story-text h3 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .advantage-list {
+        gap: 15px;
+    }
+
+    .advantage-item {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .advantage-item h4 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .advantage-item p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .about-image,
+    .story-image {
+        height: 180px;
+    }
+
+    .about-text p,
+    .story-text p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .story-text h3 {
+        font-size: 18px;
+    }
+
+    .advantage-item {
+        padding: 15px;
+    }
+
+    .advantage-item h4 {
+        font-size: 16px;
+    }
+
+    .advantage-item p {
+        font-size: 13px;
+    }
+}
